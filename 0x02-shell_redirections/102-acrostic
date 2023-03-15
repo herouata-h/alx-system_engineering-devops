@@ -1,12 +1,3 @@
 #!/bin/bash
-
-acrostic=$1
-message=""
-
-while IFS= read -r line; do
-    message="$message${line:0:1}"
-done <<< "$acrostic"
-
-echo "$message"
-
+cut -c 1 | paste -s -d ''
 
